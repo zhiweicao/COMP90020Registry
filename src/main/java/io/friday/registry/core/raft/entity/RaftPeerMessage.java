@@ -1,0 +1,33 @@
+package io.friday.registry.core.raft.entity;
+
+import io.friday.registry.core.entity.Message;
+import io.friday.registry.core.entity.PeerMessage;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+@AllArgsConstructor
+public class RaftPeerMessage implements Serializable {
+    private static final long serialVersionUID = 12359L;
+    private Object message;
+    private RaftPeerMessageType type;
+
+    public RaftPeerMessage(RaftPeerMessageType type) {
+        this.type = type;
+    }
+
+    public enum RaftPeerMessageType {
+        connect,
+        join,
+        joinResponse,
+        vote,
+        voteResponse,
+        applyEntry,
+        applyEntryResponse,
+        sync,
+        syncResponse,
+        heartbeat
+    }
+}
