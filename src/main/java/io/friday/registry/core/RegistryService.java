@@ -1,10 +1,12 @@
 package io.friday.registry.core;
 
+import io.friday.registry.common.entity.Address;
 import io.friday.registry.common.entity.NotifyListener;
 import io.friday.registry.common.entity.RegisterMeta;
 import io.friday.registry.common.entity.ServiceMeta;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 public interface RegistryService {
@@ -22,7 +24,10 @@ public interface RegistryService {
     /**
      * Subscribe a service from registry server.
      */
-    void subscribe(ServiceMeta serviceMeta, NotifyListener listener);
+    //TODO
+//    void subscribe(ServiceMeta serviceMeta, NotifyListener listener);
+
+    void subscribe(ServiceMeta serviceMeta, Address address);
 
     /**
      * Find a service in the local scope.
@@ -32,12 +37,13 @@ public interface RegistryService {
     /**
      * List all consumer's info.
      */
-    Map<ServiceMeta, Integer> consumers();
+    Map<ServiceMeta, List<Address>> consumers();
 
     /**
      * List all provider's info.
+     * @return
      */
-    Map<RegisterMeta, RegisterState> providers();
+    List<RegisterMeta> providers();
 
     /**
      * Returns {@code true} if {@link RegistryService} is shutdown.
@@ -49,9 +55,4 @@ public interface RegistryService {
      */
     void shutdownGracefully();
 
-
-    enum RegisterState {
-        PREPARE,
-        DONE
-    }
 }
