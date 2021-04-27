@@ -1,6 +1,6 @@
 package io.friday.registry.core.raft.handler;
 
-import io.friday.registry.core.entity.Address;
+import io.friday.registry.common.entity.Address;
 import io.friday.registry.core.raft.RaftNode;
 import io.friday.registry.core.raft.event.HeartbeatMessage;
 import io.friday.registry.core.raft.entity.RaftPeerMessage;

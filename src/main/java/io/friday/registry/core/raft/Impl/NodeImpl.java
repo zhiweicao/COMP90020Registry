@@ -1,7 +1,7 @@
 package io.friday.registry.core.raft.Impl;
 
 import io.friday.registry.core.client.NioClient;
-import io.friday.registry.core.entity.Address;
+import io.friday.registry.common.entity.Address;
 import io.friday.registry.core.raft.RaftMonitor;
 import io.friday.registry.core.raft.RaftNode;
 import io.friday.registry.core.raft.entity.*;

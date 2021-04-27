@@ -1,8 +1,8 @@
 package io.friday.registry.core;
 
-import io.friday.registry.core.entity.NotifyListener;
-import io.friday.registry.core.entity.RegisterMeta;
-import io.friday.registry.core.entity.ServiceMeta;
+import io.friday.registry.common.entity.NotifyListener;
+import io.friday.registry.common.entity.RegisterMeta;
+import io.friday.registry.common.entity.ServiceMeta;
 
 import java.util.Collection;
 import java.util.Map;

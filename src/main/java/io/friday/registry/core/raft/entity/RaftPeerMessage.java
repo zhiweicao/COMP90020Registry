@@ -1,7 +1,5 @@
 package io.friday.registry.core.raft.entity;
 
-import io.friday.registry.core.entity.Message;
-import io.friday.registry.core.entity.PeerMessage;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

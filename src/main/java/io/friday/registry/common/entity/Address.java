@@ -1,4 +1,4 @@
-package io.friday.registry.core.entity;
+package io.friday.registry.common.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,6 @@
 package io.friday.registry.core.raft;
 
-import io.friday.registry.core.RegistryServerDemo;
-import io.friday.registry.core.entity.Address;
+import io.friday.registry.common.entity.Address;
 import io.friday.registry.core.raft.Impl.NodeImpl;
 import org.apache.commons.lang3.StringUtils;
 

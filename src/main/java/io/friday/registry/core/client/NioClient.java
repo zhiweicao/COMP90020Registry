@@ -1,11 +1,6 @@
 package io.friday.registry.core.client;
 
-import io.friday.registry.core.entity.Address;
-import io.friday.registry.core.entity.Message;
-import io.friday.registry.core.entity.PeerMessage;
-import io.friday.registry.core.handler.ClientPeerMessageHandler;
-import io.friday.registry.core.handler.PeerMessageCodec;
-import io.friday.registry.core.rpc.RegistryNodeManager;
+import io.friday.registry.common.entity.Address;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
@@ -56,8 +51,6 @@ public class NioClient {
     public void start() {
         try {
             channelFuture = bootstrap.connect(destHost, destPort).sync();
-            Message message = new Message();
-            message.setData(destHost+":"+destPort);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

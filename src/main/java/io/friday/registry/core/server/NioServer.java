@@ -1,8 +1,5 @@
 package io.friday.registry.core.server;
 
-import io.friday.registry.core.handler.PeerMessageCodec;
-import io.friday.registry.core.handler.PeerMessageHandler;
-import io.friday.registry.core.rpc.RegistryNodeManager;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

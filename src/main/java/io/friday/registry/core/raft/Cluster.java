@@ -1,6 +1,6 @@
 package io.friday.registry.core.raft;
 
-import io.friday.registry.core.entity.Address;
+import io.friday.registry.common.entity.Address;
 import io.netty.channel.Channel;
 
 public interface Cluster {
